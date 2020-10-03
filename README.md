@@ -15,13 +15,18 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [x] Trailers for popular movies are played automatically when the movie is selected (1 point).
   - [x] When clicking on a popular movie (i.e. a movie voted for more than 5 stars) the video should be played immediately.
   - [x] Less popular videos rely on the detailed page should show an image preview that can initiate playing a YouTube video.
-- [ ] Add a play icon overlay to popular movies to indicate that the movie can be played (1 point).
+- [X] Add a play icon overlay to popular movies to indicate that the movie can be played (1 point).
 - [ ] Apply the popular ButterKnife annotation library to reduce view boilerplate. (1 point)
 - [ ] Add a rounded corners for the images using the Glide transformations. (1 point)
 
 ### Walkthrough showing More Popular Movies Playing immediately
 
 <img src="https://github.com/jtmlock/Flixster/blob/master/FlixsterWHighVsLowRating.gif" width=250><br>
+
+## Walkthrough showing popular movies with Youtube icon
+
+<img src="https://github.com/jtmlock/Flixster/blob/master/FilxsterYouTubeVisible.gif" width=250><br>
+
 
 ### Note on Popularity - for this assignment Every movie was above 5 Stars
 5.9, 7.4, 6, 6.9, 7, 6, 5.9, 6.6, 7.6, 5.4, 7.4, 8.6, 7.5 ,6.7 ,5.4 ,6.5 ,6.8, 5.8 ,8 ,6.6
