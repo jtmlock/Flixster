@@ -23,7 +23,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 <img src="https://github.com/jtmlock/Flixster/blob/master/FlixsterWReviewAndSynopsis.gif" width=250><br>
 
-<img src="https://github.com/jtmlock/Flixster/blob/master/FlixsterLandscapeWFullScreenYoutube.gif" width=250><br>
+<img src="https://github.com/jtmlock/Flixster/blob/master/FlixsterLandscapeWFullScreenYoutube.gif" width=600><br>
 
 ### Notes
 
@@ -56,7 +56,7 @@ Describe any challenges encountered while building the app.
 
 <img src="https://github.com/jtmlock/Flixster/blob/master/Flixster.gif" width=250><br>
 
-<img src="https://github.com/jtmlock/Flixster/blob/master/FlixsterLandscapeMode.gif" width=500><br>
+<img src="https://github.com/jtmlock/Flixster/blob/master/FlixsterLandscapeMode.gif" width=600><br>
 
 ### Notes
 Describe any challenges encountered while building the app.
