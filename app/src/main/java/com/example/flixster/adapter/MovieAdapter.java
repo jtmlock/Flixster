@@ -1,5 +1,6 @@
 package com.example.flixster.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -33,6 +34,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
     Context context;
     List<Movie> movies;
 
+    boolean stars;
+
+
     public MovieAdapter(Context context, List<Movie> movies) {
         this.context = context;
         this.movies = movies;
@@ -42,6 +46,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
+
+
         Log.d( "MovieAdapter", "OnCreateViewHolder");
         View movieView = LayoutInflater.from(context).inflate(R.layout.item_movie, parent, false);
         return new ViewHolder(movieView);
@@ -70,6 +77,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
         TextView tvTitle;
         TextView tvOverview;
         ImageView ivPoster;
+        ImageView ivYoutube;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -77,23 +86,31 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             tvOverview = itemView.findViewById(R.id.tvOverview);
             ivPoster = itemView.findViewById(R.id.ivPoster);
             container = itemView.findViewById(R.id.container);
-        }
+            ivYoutube = itemView.findViewById(R.id.ivYoutube);
 
+        }
 
 
         public void bind(final Movie movie) {
             tvTitle.setText(movie.getTitle());
             tvOverview.setText(movie.getOverview());
             String imageURL;
+
+            if(movie.getRating() > 5) // for test purposes uses above average 6.7 value
+                ivYoutube.setVisibility(View.VISIBLE);
+
+
             // if phone is in landscape
             if (context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
                 //then imageURL = back drop image
                 imageURL = movie.getBackdropPath();
-            } else {
+
+                } else {
                 // else imageURL = poster image
                 imageURL = movie.getPosterPath();
             }
             Glide.with(context).load(imageURL).into(ivPoster);
+
 
             // 1. Register click listen on the whole row
             container.setOnClickListener(new View.OnClickListener() {
