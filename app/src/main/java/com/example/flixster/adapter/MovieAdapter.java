@@ -22,6 +22,10 @@ import com.example.flixster.models.Movie;
 
 import org.parceler.Parcels;
 
+import com.bumptech.glide.annotation.GlideModule;
+import com.bumptech.glide.module.AppGlideModule;
+
+
 import java.util.List;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
@@ -75,6 +79,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             container = itemView.findViewById(R.id.container);
         }
 
+
+
         public void bind(final Movie movie) {
             tvTitle.setText(movie.getTitle());
             tvOverview.setText(movie.getOverview());
@@ -99,6 +105,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
                     context.startActivity(i);
                     }
             });
+
+
         }
     }
 }

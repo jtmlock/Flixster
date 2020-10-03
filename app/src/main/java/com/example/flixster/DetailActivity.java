@@ -31,6 +31,8 @@ public class DetailActivity extends YouTubeBaseActivity {
     RatingBar ratingBar;
     YouTubePlayerView youTubePlayerView;
 
+    boolean stars;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +47,35 @@ public class DetailActivity extends YouTubeBaseActivity {
         tvTitle.setText(movie.getTitle());
         tvOverview.setText(movie.getOverview());
         ratingBar.setRating((float) movie.getRating());
+
+
+        if (movie.getRating() > 5) // changed back to 5 after testing
+            //if (movie.getRating() > 6.7) - tested with average scores
+            stars = true;
+
+        // For test purposes because all values are above 5
+        //5.9
+        //7.4
+        //6
+        //6.9
+        //7
+        //6
+        //5.9
+        //6.6
+        //7.6
+        //5.4
+        //7.4
+        //8.6
+        //7.5
+        //6.7
+        //5.4
+        //6.5
+        //6.8
+        //5.8
+        //8
+        //6.6
+
+
 
 
         AsyncHttpClient client = new AsyncHttpClient();
@@ -78,6 +109,9 @@ public class DetailActivity extends YouTubeBaseActivity {
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
                 Log.d( "DetailActivity", "onInitializationSuccess");
                 youTubePlayer.cueVideo(youtubeKey);
+                if (stars == true)
+                    youTubePlayer.loadVideo(youtubeKey);
+
             }
 
             @Override
