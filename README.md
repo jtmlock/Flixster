@@ -21,10 +21,8 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### App Walkthough GIF
 
-Expose details of movie (ratings using RatingBar, popularity, and synopsis) in a separate activity.
 <img src="https://github.com/jtmlock/Flixster/blob/master/FlixsterWReviewAndSynopsis.gif" width=250><br>
 
-Allow video posts to be played in full-screen using the YouTubePlayerView.
 <img src="https://github.com/jtmlock/Flixster/blob/master/FlixsterLandscapeWFullScreenYoutube.gif" width=250><br>
 
 ### Notes
